@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUCKSHRI™ - Demo</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(145deg, #000000, #1a1a1a);
-            font-family: 'Times New Roman', serif;
-            color: gold;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px #000000, 0 0 25px gold, 0 0 50px goldenrod;
-            margin: 0;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-            text-shadow: 1px 1px 3px #000000, 0 0 10px goldenrod;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUCKSHRI™ Saree Store</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: white;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        font-size: 2.5em;
+        color: gold;
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00;
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .product {
+        background: #222;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .product:hover {
+        transform: scale(1.05);
+    }
+    .product img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .price {
+        font-size: 1.1em;
+        margin: 5px 0;
+    }
+    .mrp {
+        text-decoration: line-through;
+        color: #aaa;
+    }
+    .sale {
+        color: gold;
+        font-weight: bold;
+    }
+    .discount {
+        background: gold;
+        color: black;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    button {
+        background: gold;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+    }
+    button:hover {
+        background: #FFD700;
+    }
+    /* Floating Chatbot Button */
+    .chatbot-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: gold;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px gold;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <h1>LUCKSHRI™</h1>
-    <p>By Nikunj Khatri</p>
-    <p>Demo Website Running Successfully!</p>
+
+<header>LUCKSHRI™ Saree Store</header>
+
+<div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product">
+        <img src="https://raw.githubusercontent.com/nikunjkhatridesign/luckshri-store/main/Sarees/Handloom%20Pure%20Cotton%20White%20Pink/Handloom%20Pure%20Cotton%20White%20Pink%20By%20Nikunj%20Khatri%20(2).jpg" alt="Handloom Pure Cotton White Pink">
+        <div class="price">
+            <span class="mrp">₹9,999</span> <span class="sale">₹4,999</span> <span class="discount">50% OFF</span>
+        </div>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <img src="https://raw.githubusercontent.com/nikunjkhatridesign/luckshri-store/main/Sarees/Handloom%20Pure%20Cotton%20White%20Pink/Handloom%20Pure%20Cotton%20White%20Pink%20By%20Nikunj%20Khatri%20(3).jpg" alt="Handloom Pure Cotton White Pink">
+        <div class="price">
+            <span class="mrp">₹9,999</span> <span class="sale">₹4,999</span> <span class="discount">50% OFF</span>
+        </div>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Continue for all remaining sarees -->
+    
+</div>
+
+<!-- Floating AI Stylist Guide Button -->
+<div class="chatbot-btn" onclick="alert('AI Stylist Guide Coming Soon!')">
+    🤖
+</div>
+
 </body>
 </html>
